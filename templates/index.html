@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Crop Prediction App</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="main">
+    <h1>🌾 Crop Recommendation System 🌿</h1>
+
+    <form action="{{ url_for('predict')}}" method="post" class="input-form">
+
+      <!-- Nitrogen -->
+      <input list="nitrogen-list" name="Nitrogen" placeholder="Nitrogen" required />
+      <datalist id="nitrogen-list">
+        <option value="0"><option value="50"><option value="100"><option value="150"><option value="200">
+      </datalist>
+
+      <!-- Phosphorus -->
+      <input list="phosphorus-list" name="Phosphorus" placeholder="Phosphorus" required />
+      <datalist id="phosphorus-list">
+        <option value="0"><option value="40"><option value="80"><option value="120"><option value="160">
+      </datalist>
+
+      <!-- Potassium -->
+      <input list="potassium-list" name="Potassium" placeholder="Potassium" required />
+      <datalist id="potassium-list">
+        <option value="0"><option value="40"><option value="80"><option value="120"><option value="160">
+      </datalist>
+
+      <!-- Temperature -->
+      <input list="temperature-list" name="temperature" placeholder="Temperature (°C)" required />
+      <datalist id="temperature-list">
+        <option value="15"><option value="20"><option value="25"><option value="30"><option value="35">
+      </datalist>
+
+      <!-- Humidity -->
+      <input list="humidity-list" name="humidity" placeholder="Humidity (%)" required />
+      <datalist id="humidity-list">
+        <option value="20"><option value="40"><option value="60"><option value="80"><option value="100">
+      </datalist>
+
+      <!-- pH -->
+      <input list="ph-list" name="pH" placeholder="pH Value" required />
+      <datalist id="ph-list">
+        <option value="4.5"><option value="5.5"><option value="6.0"><option value="6.5"><option value="7.0">
+      </datalist>
+
+      <!-- Rainfall -->
+      <input list="rainfall-list" name="rainfall" placeholder="Rainfall (mm)" required />
+      <datalist id="rainfall-list">
+        <option value="50"><option value="100"><option value="150"><option value="200"><option value="250">
+      </datalist>
+
+      <button type="submit" class="btn">🚀 Predict</button>
+    </form>
+
+    {% if prediction_text %}
+  <div class="result-card celebration">
+    <h1>🎉 Recommended Crop: <span>{{ prediction_text }}</span> 🌱</h2>
+  </div>
+{% endif %}
+
+  </div>
+</body>
+</html>
