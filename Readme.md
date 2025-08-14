@@ -3,7 +3,8 @@
 
 > **Empowering farmers with AI-driven crop recommendations for better yield and profits**  
 
-![Crop Prediction Banner](assets/crop_prediction_banner.png)  
+<img src="crop-banner.png" alt="Crop Prediction Banner" height="250" width="100%">
+
 
 ---
 
@@ -79,8 +80,13 @@ This project leverages **Machine Learning** and **real-time environmental data**
 ---
 
 ## 📸 **Preview**  
+## Step1
+![App Screenshot](pic1.jpeg)  
+## Step2
+![App Screenshot](pic3.jpeg)  
+## Step3
+![App Screenshot](pic2.jpeg)
 
-![App Screenshot](assets/app_screenshot.png)  
 
 ---
 
